@@ -12,25 +12,25 @@ public class PrimeCheck{
         Scanner scan = new Scanner(System.in);
         int n,srt_n;
         boolean primeFlag = true;
+        int count = 0;
 
         System.out.print("Enter N: ");
         n=scan.nextInt();
         srt_n =(int) Math.sqrt(n);
 
         for(int i = 2; i<=srt_n; i++){
+            count++;
             if(n%i==0){
               primeFlag = false;
               break;
             }
-
         }
+        System.out.println(count);
         if(primeFlag && n> 1){
             System.out.println(n + " is a Prime number");
         }
         else{
             System.out.println(n + " is not a Prime number");
         }
-
-
     }
 }
